@@ -38,30 +38,24 @@ public class ArchaeologyExpanded {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
-    /*public static final Supplier<BrushItem> IRON_BRUSH = ITEMS.registerItem(
-            "iron_brush",
-            new IronBrush(new Item.Properties()
-                    .stacksTo(1))
-    );*/
-
     public static final DeferredHolder<Item, Item> IRON_BRUSH = ITEMS.register(
             "iron_brush",
-            () -> new IronBrush()
+            IronBrush::new
     );
 
     public static final DeferredHolder<Item, Item> GOLDEN_BRUSH = ITEMS.register(
             "golden_brush",
-            () -> new GoldenBrush()
+            GoldenBrush::new
     );
 
     public static final DeferredHolder<Item, Item> DIAMOND_BRUSH = ITEMS.register(
             "diamond_brush",
-            () -> new DiamondBrush()
+            DiamondBrush::new
     );
 
     public static final DeferredHolder<Item,Item> NETHERITE_BRUSH = ITEMS.register(
             "netherite_brush",
-            () -> new NetheriteBrush()
+            NetheriteBrush::new
     );
 
 
