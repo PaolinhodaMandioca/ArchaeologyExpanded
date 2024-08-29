@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IBI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "B": {
+      "item": "minecraft:brush"
+    }
+  },
+  "result": {
+    "item": "archaeologyexpanded:iron_brush",
+    "count": 1
+  }
+}
