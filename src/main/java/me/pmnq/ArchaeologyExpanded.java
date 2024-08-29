@@ -1,16 +1,23 @@
 package me.pmnq;
 
 import com.mojang.logging.LogUtils;
+import me.pmnq.blocks.SusDirt;
+import me.pmnq.blocks.SusDirtEntity;
 import me.pmnq.items.DiamondBrush;
 import me.pmnq.items.GoldenBrush;
 import me.pmnq.items.IronBrush;
 import me.pmnq.items.NetheriteBrush;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BrushItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BrushableBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -23,49 +30,27 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.*;
 import org.slf4j.Logger;
 
 import java.util.function.Supplier;
+
+import static me.pmnq.ModBlockEntity.BLOCK_ENTITY_TYPE;
+import static me.pmnq.ModBlocks.BLOCKS;
+import static me.pmnq.ModItems.ITEMS;
 
 @Mod(ArchaeologyExpanded.MOD_ID)
 public class ArchaeologyExpanded {
     public static final String MOD_ID = "archaeologyexpanded";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
-
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
-
-    public static final DeferredHolder<Item, Item> IRON_BRUSH = ITEMS.register(
-            "iron_brush",
-            IronBrush::new
-    );
-
-    public static final DeferredHolder<Item, Item> GOLDEN_BRUSH = ITEMS.register(
-            "golden_brush",
-            GoldenBrush::new
-    );
-
-    public static final DeferredHolder<Item, Item> DIAMOND_BRUSH = ITEMS.register(
-            "diamond_brush",
-            DiamondBrush::new
-    );
-
-    public static final DeferredHolder<Item,Item> NETHERITE_BRUSH = ITEMS.register(
-            "netherite_brush",
-            NetheriteBrush::new
-    );
-
 
 
     public ArchaeologyExpanded(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
         BLOCKS.register(modEventBus);
+        BLOCK_ENTITY_TYPE.register(modEventBus);
         ITEMS.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
 
 
 
@@ -84,6 +69,13 @@ public class ArchaeologyExpanded {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(new ItemStack(ModItems.IRON_BRUSH));
+            event.accept(new ItemStack(ModItems.GOLDEN_BRUSH));
+            event.accept(new ItemStack(ModItems.DIAMOND_BRUSH));
+            event.accept(new ItemStack(ModItems.NETHERITE_BRUSH));
+
+        }
 
     }
 
