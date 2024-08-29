@@ -1,6 +1,7 @@
 package me.pmnq;
 
 import com.mojang.logging.LogUtils;
+import me.pmnq.block.SuspiciousDirt;
 import me.pmnq.items.DiamondBrush;
 import me.pmnq.items.GoldenBrush;
 import me.pmnq.items.IronBrush;
@@ -38,6 +39,7 @@ public class ArchaeologyExpanded {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
+
     public static final DeferredHolder<Item, Item> IRON_BRUSH = ITEMS.register(
             "iron_brush",
             IronBrush::new
@@ -67,9 +69,10 @@ public class ArchaeologyExpanded {
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
 
-
-
         NeoForge.EVENT_BUS.register(this);
+
+        //area com os blcos suspeitos (>'-'<)
+        SuspiciousDirt.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
