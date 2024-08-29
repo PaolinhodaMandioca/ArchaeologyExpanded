@@ -1,10 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GGG",
-    "GIG",
-    "GGG"
-  ],
+  "category": "misc",
   "key": {
     "G": {
       "item": "minecraft:gold_nugget"
@@ -13,8 +9,13 @@
       "item": "archaeologyexpanded:iron_brush"
     }
   },
+  "pattern": [
+    "GGG",
+    "GIG",
+    "GGG"
+  ],
   "result": {
-    "item": "archaeologyexpanded:golden_brush",
-    "count": 1
+    "count": 1,
+    "id": "archaeologyexpanded:golden_brush"
   }
 }
