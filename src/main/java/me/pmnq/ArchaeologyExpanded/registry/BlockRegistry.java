@@ -20,6 +20,7 @@ public class BlockRegistry {
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_DIRT;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SAND;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_CLAY;
+    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_RED_SAND;
 
     public BlockRegistry() {
     }
@@ -54,6 +55,19 @@ public class BlockRegistry {
         SUSPICIOUS_CLAY = BLOCKS.register("suspicious_clay", () -> {
             return new ArchExBrushableBlock(
                     Blocks.CLAY,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.SAND)
+                            .instrument(NoteBlockInstrument.SNARE)
+                            .strength(0.25F)
+                            .sound(SoundType.SUSPICIOUS_SAND)
+                            .pushReaction(PushReaction.DESTROY),
+                    SoundEvents.BRUSH_SAND,
+                    SoundEvents.BRUSH_SAND_COMPLETED);
+        });
+
+        SUSPICIOUS_RED_SAND = BLOCKS.register("suspicious_red_sand", () -> {
+            return new ArchExBrushableBlock(
+                    Blocks.RED_SAND,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.SAND)
                             .instrument(NoteBlockInstrument.SNARE)
