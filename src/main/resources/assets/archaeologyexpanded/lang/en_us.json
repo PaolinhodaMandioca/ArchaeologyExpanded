@@ -4,5 +4,7 @@
   "item.archaeologyexpanded.diamond_brush": "Diamond Brush",
   "item.archaeologyexpanded.netherite_brush": "Netherite Brush",
 
-  "block.archaeologyexpanded.suspicious_dirt": "Suspicious Dirt"
+  "block.archaeologyexpanded.suspicious_dirt": "Suspicious Dirt",
+  "block.archaeologyexpanded.suspicious_clay": "Suspicious Clay",
+  "block.archaeologyexpanded.suspicious_soul_sand": "Suspicious Soul Sand"
 }
