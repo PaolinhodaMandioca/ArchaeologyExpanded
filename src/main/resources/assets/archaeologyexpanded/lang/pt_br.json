@@ -2,5 +2,7 @@
   "item.archaeologyexpanded.iron_brush": "Pincel de ferro",
   "item.archaeologyexpanded.golden_brush": "Pincel de ouro",
   "item.archaeologyexpanded.diamond_brush": "Pincel de diamante",
-  "item.archaeologyexpanded.netherite_brush": "Pincel de netherita"
+  "item.archaeologyexpanded.netherite_brush": "Pincel de netherita",
+
+  "block.archaeologyexpanded.suspicious_dirt": "Terra suspeita"
 }
