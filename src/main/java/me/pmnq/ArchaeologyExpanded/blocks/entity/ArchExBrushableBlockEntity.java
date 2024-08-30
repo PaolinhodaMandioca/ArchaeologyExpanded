@@ -1,20 +1,18 @@
-package me.pmnq.blocks.entity;
+package me.pmnq.ArchaeologyExpanded.blocks.entity;
 
-import me.pmnq.registry.ModRegistry;
+import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
 
 public class ArchExBrushableBlockEntity extends BrushableBlockEntity {
 
-    public ArchExBrushableBlockEntity(BlockPos pos, BlockState state) {
-        super(pos, state);
+    public ArchExBrushableBlockEntity(BlockPos pos, BlockState blockstate) {
+        super(pos, blockstate);
     }
 
-    @Override
-    public @NotNull BlockEntityType<?> getType(){
+    public BlockEntityType<?> getType(){
         return ModRegistry.BRUSHABLE_BLOCK.get(); // Use o registro correto
     }
 }
