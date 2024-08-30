@@ -27,8 +27,8 @@ public class CreativeTabRegistry {
         ARCHEAOLOGY_TAB = CREATIVE_TAB.register(
                 "archealogy_tab",
                 () -> CreativeModeTab.builder()
-                        .title(Component.translatable("itemGroup." + MOD_ID + ".archeaology_tab"))
-                        .icon(() -> new ItemStack(ItemRegistry.DIAMOND_BRUSH.get()))
+                        .title(Component.translatable("itemGroup." + MOD_ID + ".archaeology_tab"))
+                        .icon(() -> new ItemStack(ModRegistry.LOGO.get()))
                         .displayItems((params,output) -> {
                             Stream allItems = ITEMS.getEntries().stream().map(DeferredHolder::get).map(Item::getDefaultInstance);
                             Objects.requireNonNull(output);

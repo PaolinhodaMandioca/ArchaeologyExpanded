@@ -35,7 +35,7 @@ public class ArchaeologyExpanded {
         MixinBootstrap.init();
 
         BlockRegistry.BLOCKS.register(modEventBus);
-        ModRegistry.ITEMS.register(modEventBus);
+        ModRegistry.MOD_LOGO.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
         BlockEntityRegistry.ENTITY.register(modEventBus);
         CreativeTabRegistry.CREATIVE_TAB.register(modEventBus);
