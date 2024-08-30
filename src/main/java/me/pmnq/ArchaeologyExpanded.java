@@ -1,23 +1,7 @@
 package me.pmnq;
 
 import com.mojang.logging.LogUtils;
-import me.pmnq.blocks.SusDirt;
-import me.pmnq.blocks.SusDirtEntity;
-import me.pmnq.items.DiamondBrush;
-import me.pmnq.items.GoldenBrush;
-import me.pmnq.items.IronBrush;
-import me.pmnq.items.NetheriteBrush;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BrushableBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -30,12 +14,9 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.*;
 import org.slf4j.Logger;
 
-import java.util.function.Supplier;
-
-import static me.pmnq.ModBlockEntity.BLOCK_ENTITY_TYPE;
+import static me.pmnq.ModBlockEntity.BLOCK_ENTITY;
 import static me.pmnq.ModBlocks.BLOCKS;
 import static me.pmnq.ModItems.ITEMS;
 
@@ -49,7 +30,7 @@ public class ArchaeologyExpanded {
         modEventBus.addListener(this::commonSetup);
 
         BLOCKS.register(modEventBus);
-        BLOCK_ENTITY_TYPE.register(modEventBus);
+        BLOCK_ENTITY.register(modEventBus);
         ITEMS.register(modEventBus);
 
 

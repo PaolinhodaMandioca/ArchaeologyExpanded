@@ -2,5 +2,7 @@
   "item.archaeologyexpanded.iron_brush": "Iron Brush",
   "item.archaeologyexpanded.golden_brush": "Golden Brush",
   "item.archaeologyexpanded.diamond_brush": "Diamond Brush",
-  "item.archaeologyexpanded.netherite_brush": "Netherite Brush"
+  "item.archaeologyexpanded.netherite_brush": "Netherite Brush",
+
+  "block.archaeologyexpanded.suspicious_dirt": "Suspicious Dirt"
 }
