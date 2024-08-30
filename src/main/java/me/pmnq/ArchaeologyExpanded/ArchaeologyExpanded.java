@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import me.pmnq.ArchaeologyExpanded.registry.BlockRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ItemRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
+import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
+import me.pmnq.ArchaeologyExpanded.registry.CreativeTabRegistry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
@@ -35,7 +37,8 @@ public class ArchaeologyExpanded {
         BlockRegistry.BLOCKS.register(modEventBus);
         ModRegistry.ITEMS.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
-        ModRegistry.ENTITY.register(modEventBus);
+        BlockEntityRegistry.ENTITY.register(modEventBus);
+        CreativeTabRegistry.CREATIVE_TAB.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -58,7 +61,6 @@ public class ArchaeologyExpanded {
             event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_RED_SAND.get()));
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
-
             event.accept(new ItemStack(ItemRegistry.IRON_BRUSH));
             event.accept(new ItemStack(ItemRegistry.GOLDEN_BRUSH));
             event.accept(new ItemStack(ItemRegistry.DIAMOND_BRUSH));
