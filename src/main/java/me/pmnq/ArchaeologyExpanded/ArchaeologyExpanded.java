@@ -55,6 +55,7 @@ public class ArchaeologyExpanded {
             event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_DIRT.get()));
             event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_SOUL_SAND.get()));
             event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_CLAY.get()));
+            event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_RED_SAND.get()));
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
 
