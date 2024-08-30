@@ -1,4 +1,4 @@
-package me.pmnq;
+package me.pmnq.ArchaeologyExpanded;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

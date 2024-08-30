@@ -1,4 +1,4 @@
-package me.pmnq.items;
+package me.pmnq.ArchaeologyExpanded.items;
 
 import net.minecraft.world.item.BrushItem;
 import net.minecraft.world.item.Item;
