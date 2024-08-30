@@ -13,13 +13,14 @@ import static me.pmnq.ArchaeologyExpanded.MOD_ID;
 public class ModBlockEntity {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MOD_ID);
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SusBlockEntity>> SUS_DIRT_ENTITY = BLOCK_ENTITY.register(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SusBlockEntity>> SUS_BLOCK_ENTITY = BLOCK_ENTITY.register(
             "brushable_block",
             () -> {
                 return BlockEntityType.Builder.of(
                         SusBlockEntity::new,
                         new Block[]{
-                                (Block) ModBlocks.SUS_DIRT.get()
+                                (Block) ModBlocks.SUS_DIRT.get(),
+                                (Block) ModBlocks.SUS_RED_SAND.get()
                         }
                 ).build((Type) null);
             }

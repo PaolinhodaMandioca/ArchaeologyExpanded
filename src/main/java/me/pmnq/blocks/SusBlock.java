@@ -2,7 +2,11 @@ package me.pmnq.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSources;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -24,10 +28,9 @@ public class SusBlock extends BrushableBlock {
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
-        if (entity instanceof Player p) {
-            this.destroy(level,pos,state);
+        if (!entity.isSteppingCarefully() && entity instanceof LivingEntity) {
+            level.destroyBlock(pos,false);
         }
-
 
         super.stepOn(level, pos, state, entity);
     }

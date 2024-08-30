@@ -37,7 +37,27 @@ public class ModBlocks {
                 );
             }
     );
-
     public static final DeferredItem<BlockItem> SUS_DIRT_ITEM = ITEMS.registerSimpleBlockItem("suspicious_dirt", SUS_DIRT);
+
+    public static final DeferredHolder<Block, SusBlock> SUS_RED_SAND = BLOCKS.register(
+            "suspicious_red_sand",
+            () -> {
+                return new SusBlock(
+                        Blocks.RED_SAND,
+                        SoundEvents.BRUSH_SAND,
+                        SoundEvents.BRUSH_SAND_COMPLETED,
+                        Properties.of()
+                                .mapColor(MapColor.SAND)
+                                .instrument(NoteBlockInstrument.SNARE)
+                                .strength(0.25f)
+                                .sound(SoundType.SUSPICIOUS_SAND)
+                                .pushReaction(PushReaction.DESTROY)
+                );
+            }
+    );
+    public static final DeferredItem<BlockItem> SUS_RED_SAND_ITEM = ITEMS.registerSimpleBlockItem("suspicious_red_sand", SUS_RED_SAND);
+
+
+
 
 }

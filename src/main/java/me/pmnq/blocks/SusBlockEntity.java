@@ -13,6 +13,6 @@ public class SusBlockEntity extends BrushableBlockEntity {
     }
 
     public BlockEntityType<?> getType() {
-        return (BlockEntityType) ModBlockEntity.SUS_DIRT_ENTITY.get();
+        return (BlockEntityType) ModBlockEntity.SUS_BLOCK_ENTITY.get();
     }
 }
