@@ -1,11 +1,13 @@
 package me.pmnq.ArchaeologyExpanded;
 
 import com.mojang.logging.LogUtils;
+import me.pmnq.ArchaeologyExpanded.events.TestEvents;
 import me.pmnq.ArchaeologyExpanded.registry.BlockRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ItemRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.CreativeTabRegistry;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
@@ -19,6 +21,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 import org.spongepowered.asm.launch.MixinBootstrap;
@@ -43,6 +46,7 @@ public class ArchaeologyExpanded {
 
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(new TestEvents());
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

@@ -27,12 +27,12 @@ public class ArchExBrushableBlock extends BrushableBlock {
         return new ArchExBrushableBlockEntity(pos, blockstate);
     }
 
-    @Override
+    /*@Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if (!entity.isSteppingCarefully() && entity instanceof Player) {
             level.destroyBlock(pos,false);
         }
 
         super.stepOn(level, pos, state, entity);
-    }
+    }*/
 }
