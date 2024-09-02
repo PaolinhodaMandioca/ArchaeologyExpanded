@@ -22,8 +22,14 @@ public class ItemRegistry {
     public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SAND_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_CLAY_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_RED_SAND_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SOIL_ITEM;
 
-    public static final DeferredHolder<Item, Item> SUS_STONE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_STONE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_ANDESITE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_DEEPSLATE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_DIORITE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_END_STONE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_NETHERRACK_ITEM;
 
 
 
@@ -54,10 +60,33 @@ public class ItemRegistry {
             return new BlockItem(BlockRegistry.SUSPICIOUS_RED_SAND.get(), new Item.Properties());
         });
 
-        SUS_STONE_ITEM =ITEMS.register("suspicious_stone", () -> {
-            return new BlockItem(BlockRegistry.SUS_STONE.get(), new Item.Properties());
+        SUSPICIOUS_SOUL_SOIL_ITEM = ITEMS.register("suspicious_soul_soil", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_SOUL_SOIL.get(), new Item.Properties());
         });
 
+        SUSPICIOUS_STONE_ITEM =ITEMS.register("suspicious_stone", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_STONE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_ANDESITE_ITEM =ITEMS.register("suspicious_andesite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_ANDESITE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_DEEPSLATE_ITEM =ITEMS.register("suspicious_deepslate", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_DEEPSLATE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_DIORITE_ITEM =ITEMS.register("suspicious_diorite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_DIORITE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_END_STONE_ITEM =ITEMS.register("suspicious_end_stone", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_END_STONE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_NETHERRACK_ITEM =ITEMS.register("suspicious_netherrack", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_NETHERRACK.get(), new Item.Properties());
+        });
 
     }
 }

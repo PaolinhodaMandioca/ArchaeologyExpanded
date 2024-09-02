@@ -20,9 +20,16 @@ public class BlockRegistry {
 
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_DIRT;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SAND;
+    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SOIL;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_CLAY;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_RED_SAND;
-    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUS_STONE;
+
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_STONE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_ANDESITE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_DEEPSLATE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_DIORITE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_END_STONE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_NETHERRACK;
 
 
     public BlockRegistry() {
@@ -55,6 +62,20 @@ public class BlockRegistry {
                     SoundEvents.BRUSH_SAND_COMPLETED);
         });
 
+        //configurar
+        SUSPICIOUS_SOUL_SOIL = BLOCKS.register("suspicious_soul_soil", () -> {
+            return new ArchExBrushableBlock(
+                    Blocks.SOUL_SOIL,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.SAND)
+                            .instrument(NoteBlockInstrument.SNARE)
+                            .strength(0.25F)
+                            .sound(SoundType.SOUL_SOIL)
+                            .pushReaction(PushReaction.DESTROY),
+                    SoundEvents.BRUSH_SAND,
+                    SoundEvents.BRUSH_SAND_COMPLETED);
+        });
+
         SUSPICIOUS_CLAY = BLOCKS.register("suspicious_clay", () -> {
             return new ArchExBrushableBlock(
                     Blocks.CLAY,
@@ -64,8 +85,8 @@ public class BlockRegistry {
                             .strength(0.25F)
                             .sound(SoundType.SUSPICIOUS_SAND)
                             .pushReaction(PushReaction.DESTROY),
-                    SoundEvents.BRUSH_SAND,
-                    SoundEvents.BRUSH_SAND_COMPLETED);
+                    SoundEvents.BRUSH_GRAVEL,
+                    SoundEvents.BRUSH_GRAVEL_COMPLETED);
         });
 
         SUSPICIOUS_RED_SAND = BLOCKS.register("suspicious_red_sand", () -> {
@@ -81,7 +102,9 @@ public class BlockRegistry {
                     SoundEvents.BRUSH_SAND_COMPLETED);
         });
 
-        SUS_STONE = BLOCKS.register("suspicious_stone", () -> {
+
+        //configurar
+        SUSPICIOUS_STONE = BLOCKS.register("suspicious_stone", () -> {
             return new ArchExStoneBrushableBlock(
                     Blocks.STONE,
                     SoundEvents.BRUSH_GENERIC,
@@ -91,6 +114,76 @@ public class BlockRegistry {
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .strength(0.75F)
                             .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_ANDESITE = BLOCKS.register("suspicious_andesite", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.ANDESITE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_DEEPSLATE = BLOCKS.register("suspicious_deepslate", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.DEEPSLATE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.DEEPSLATE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_DIORITE = BLOCKS.register("suspicious_diorite", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.DIORITE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_END_STONE = BLOCKS.register("suspicious_end_stone", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.END_STONE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_NETHERRACK = BLOCKS.register("suspicious_netherrack", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.NETHERRACK,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.NETHER)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.NETHERRACK)
                             .pushReaction(PushReaction.DESTROY));
         });
     }

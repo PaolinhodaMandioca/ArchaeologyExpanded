@@ -61,31 +61,15 @@ public class ArchaeologyExpanded {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-
-            event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_DIRT.get()));
-            event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_SOUL_SAND.get()));
-            event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_CLAY.get()));
-            event.accept(new ItemStack(BlockRegistry.SUSPICIOUS_RED_SAND.get()));
-        }
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
-            event.accept(new ItemStack(ItemRegistry.IRON_BRUSH));
-            event.accept(new ItemStack(ItemRegistry.GOLDEN_BRUSH));
-            event.accept(new ItemStack(ItemRegistry.DIAMOND_BRUSH));
-            event.accept(new ItemStack(ItemRegistry.NETHERITE_BRUSH));
-
-        }
     }
 
     @SubscribeEvent
     public void onServerStarting (ServerStartingEvent event){
-
     }
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
         }
         @SubscribeEvent
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {

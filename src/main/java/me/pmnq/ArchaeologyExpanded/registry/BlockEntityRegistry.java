@@ -24,14 +24,20 @@ public class BlockEntityRegistry {
                             BlockRegistry.SUSPICIOUS_DIRT.get(),
                             BlockRegistry.SUSPICIOUS_SOUL_SAND.get(),
                             BlockRegistry.SUSPICIOUS_CLAY.get(),
-                            BlockRegistry.SUSPICIOUS_RED_SAND.get()
+                            BlockRegistry.SUSPICIOUS_RED_SAND.get(),
+                            BlockRegistry.SUSPICIOUS_SOUL_SOIL.get()
                     }).build(null);
         });
 
         BRUSHABLE_STONE = ENTITY.register("brushable_stone", () -> {
             return net.minecraft.world.level.block.entity.BlockEntityType.Builder.of(ArchExStoneBrushableBlockEntity::new,
                     new Block[]{
-                            BlockRegistry.SUS_STONE.get()
+                            BlockRegistry.SUSPICIOUS_STONE.get(),
+                            BlockRegistry.SUSPICIOUS_ANDESITE.get(),
+                            BlockRegistry.SUSPICIOUS_DEEPSLATE.get(),
+                            BlockRegistry.SUSPICIOUS_DIORITE.get(),
+                            BlockRegistry.SUSPICIOUS_END_STONE.get(),
+                            BlockRegistry.SUSPICIOUS_NETHERRACK.get()
                     }).build(null);
         });
 
