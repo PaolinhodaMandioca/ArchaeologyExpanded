@@ -89,7 +89,7 @@ public class ArchaeologyExpanded {
         }
         @SubscribeEvent
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_BLOCK.get(), BrushableBlockRenderer::new);
+            event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_SAND.get(), BrushableBlockRenderer::new);
             //event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_STONE.get(), BrushableBlockRenderer::new);
 
         }
