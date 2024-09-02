@@ -31,9 +31,10 @@ public class ItemRegistry {
     public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SOIL_ITEM;
 
     public static final DeferredHolder<Item, Item> SUSPICIOUS_STONE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_DIORITE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_GRANITE_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_ANDESITE_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_DEEPSLATE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_DIORITE_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_END_STONE_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_NETHERRACK_ITEM;
 
@@ -129,6 +130,13 @@ public class ItemRegistry {
         SUSPICIOUS_STONE_ITEM =ITEMS.register("suspicious_stone", () -> {
             return new BlockItem(BlockRegistry.SUSPICIOUS_STONE.get(), new Item.Properties());
         });
+        SUSPICIOUS_DIORITE_ITEM =ITEMS.register("suspicious_diorite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_DIORITE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_GRANITE_ITEM =ITEMS.register("suspicious_granite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_GRANITE.get(), new Item.Properties());
+        });
 
         SUSPICIOUS_ANDESITE_ITEM =ITEMS.register("suspicious_andesite", () -> {
             return new BlockItem(BlockRegistry.SUSPICIOUS_ANDESITE.get(), new Item.Properties());
@@ -136,10 +144,6 @@ public class ItemRegistry {
 
         SUSPICIOUS_DEEPSLATE_ITEM =ITEMS.register("suspicious_deepslate", () -> {
             return new BlockItem(BlockRegistry.SUSPICIOUS_DEEPSLATE.get(), new Item.Properties());
-        });
-
-        SUSPICIOUS_DIORITE_ITEM =ITEMS.register("suspicious_diorite", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_DIORITE.get(), new Item.Properties());
         });
 
         SUSPICIOUS_END_STONE_ITEM =ITEMS.register("suspicious_end_stone", () -> {

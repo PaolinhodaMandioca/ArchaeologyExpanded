@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "archaeologyexpanded:item/hand_pick"
+        "layer0": "archaeologyexpanded:item/diamond_hand_pick"
     },
     "display": {
         "firstperson_lefthand": {

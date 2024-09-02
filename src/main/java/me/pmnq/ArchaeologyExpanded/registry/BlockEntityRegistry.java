@@ -36,6 +36,7 @@ public class BlockEntityRegistry {
                             BlockRegistry.SUSPICIOUS_ANDESITE.get(),
                             BlockRegistry.SUSPICIOUS_DEEPSLATE.get(),
                             BlockRegistry.SUSPICIOUS_DIORITE.get(),
+                            BlockRegistry.SUSPICIOUS_GRANITE.get(),
                             BlockRegistry.SUSPICIOUS_END_STONE.get(),
                             BlockRegistry.SUSPICIOUS_NETHERRACK.get()
                     }).build(null);
