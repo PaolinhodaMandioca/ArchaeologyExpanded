@@ -1,7 +1,6 @@
 package me.pmnq.ArchaeologyExpanded.blocks.entity;
 
 import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
-import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
@@ -14,6 +13,6 @@ public class ArchExBrushableBlockEntity extends BrushableBlockEntity {
     }
 
     public BlockEntityType<?> getType(){
-        return BlockEntityRegistry.BRUSHABLE_BLOCK.get(); // Use o registro correto
+        return BlockEntityRegistry.BRUSHABLE_SAND.get(); // Use o registro correto
     }
 }

@@ -2,7 +2,7 @@ package me.pmnq.ArchaeologyExpanded.blocks;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import me.pmnq.ArchaeologyExpanded.blocks.entity.StoneBrushableBlockEntity;
+import me.pmnq.ArchaeologyExpanded.blocks.entity.ArchExStoneBrushableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -27,14 +27,14 @@ import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
 
-public class StoneBrushableBlock extends BaseEntityBlock implements Fallable {
+public class ArchExStoneBrushableBlock extends BaseEntityBlock implements Fallable {
 
-    public static final MapCodec<StoneBrushableBlock> CODEC = RecordCodecBuilder.mapCodec((p_344647_) -> {
+    public static final MapCodec<ArchExStoneBrushableBlock> CODEC = RecordCodecBuilder.mapCodec((p_344647_) -> {
         return p_344647_.group(
-                BuiltInRegistries.BLOCK.byNameCodec().fieldOf("turns_into").forGetter(StoneBrushableBlock::getTurnsInto),
-                BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(StoneBrushableBlock::getBrushSound),
-                BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_comleted_sound").forGetter(StoneBrushableBlock::getBrushCompletedSound),
-                propertiesCodec()).apply(p_344647_, StoneBrushableBlock::new);
+                BuiltInRegistries.BLOCK.byNameCodec().fieldOf("turns_into").forGetter(ArchExStoneBrushableBlock::getTurnsInto),
+                BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(ArchExStoneBrushableBlock::getBrushSound),
+                BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_comleted_sound").forGetter(ArchExStoneBrushableBlock::getBrushCompletedSound),
+                propertiesCodec()).apply(p_344647_, ArchExStoneBrushableBlock::new);
     });
     private static final IntegerProperty DUSTED;
     public static final int TICK_DELAY = 2;
@@ -42,11 +42,11 @@ public class StoneBrushableBlock extends BaseEntityBlock implements Fallable {
     private final SoundEvent brushSound;
     private final SoundEvent brushCompletedSound;
 
-    public MapCodec<StoneBrushableBlock> codec() {
+    public MapCodec<ArchExStoneBrushableBlock> codec() {
         return CODEC;
     }
 
-    public StoneBrushableBlock(Block turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, BlockBehaviour.Properties properties) {
+    public ArchExStoneBrushableBlock(Block turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, BlockBehaviour.Properties properties) {
         super(properties);
         this.turnsInto = turnsInto;
         this.brushSound = brushSound;
@@ -73,7 +73,7 @@ public class StoneBrushableBlock extends BaseEntityBlock implements Fallable {
 
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         BlockEntity var6 = level.getBlockEntity(pos);
-        if (var6 instanceof StoneBrushableBlockEntity brushableblockentity) {
+        if (var6 instanceof ArchExStoneBrushableBlockEntity brushableblockentity) {
             brushableblockentity.checkReset();
         }
 
@@ -105,7 +105,7 @@ public class StoneBrushableBlock extends BaseEntityBlock implements Fallable {
 
     @Nullable
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new StoneBrushableBlockEntity(pos, state);
+        return new ArchExStoneBrushableBlockEntity(pos, state);
     }
 
     public Block getTurnsInto() {

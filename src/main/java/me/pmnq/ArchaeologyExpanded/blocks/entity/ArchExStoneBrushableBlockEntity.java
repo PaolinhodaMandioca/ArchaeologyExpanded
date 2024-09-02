@@ -2,7 +2,7 @@ package me.pmnq.ArchaeologyExpanded.blocks.entity;
 
 import com.mojang.logging.LogUtils;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import me.pmnq.ArchaeologyExpanded.blocks.StoneBrushableBlock;
+import me.pmnq.ArchaeologyExpanded.blocks.ArchExStoneBrushableBlock;
 import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -22,7 +22,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.storage.loot.LootParams;
@@ -36,7 +35,7 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 
 
-public class StoneBrushableBlockEntity extends BlockEntity {
+public class ArchExStoneBrushableBlockEntity extends BlockEntity {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final String LOOT_TABLE_TAG = "LootTable";
     private static final String LOOT_TABLE_SEED_TAG = "LootTableSeed";
@@ -56,7 +55,7 @@ public class StoneBrushableBlockEntity extends BlockEntity {
     private long lootTableSeed;
 
 
-    public StoneBrushableBlockEntity(BlockPos pos, BlockState blockState) {
+    public ArchExStoneBrushableBlockEntity(BlockPos pos, BlockState blockState) {
         super(BlockEntityRegistry.BRUSHABLE_STONE.get(), pos, blockState);
         this.item = ItemStack.EMPTY;
     }
@@ -127,8 +126,8 @@ public class StoneBrushableBlockEntity extends BlockEntity {
             this.level.levelEvent(3008, this.getBlockPos(), Block.getId(blockstate));
             Block var5 = this.getBlockState().getBlock();
             Block block;
-            if (var5 instanceof StoneBrushableBlock) {
-                StoneBrushableBlock brushableblock = (StoneBrushableBlock)var5;
+            if (var5 instanceof ArchExStoneBrushableBlock) {
+                ArchExStoneBrushableBlock brushableblock = (ArchExStoneBrushableBlock)var5;
                 block = brushableblock.getTurnsInto();
             } else {
                 block = Blocks.AIR;
