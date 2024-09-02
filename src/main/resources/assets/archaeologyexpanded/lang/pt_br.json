@@ -5,9 +5,11 @@
   "item.archaeologyexpanded.golden_brush": "Pincel de ouro",
   "item.archaeologyexpanded.diamond_brush": "Pincel de diamante",
   "item.archaeologyexpanded.netherite_brush": "Pincel de netherita",
+  "item.archaeologyexpanded.hand_pick": "Piqueta",
 
   "block.archaeologyexpanded.suspicious_dirt": "Terra suspeita",
   "block.archaeologyexpanded.suspicious_clay": "Argila suspeita",
   "block.archaeologyexpanded.suspicious_soul_sand": "Areia das Almas suspeita",
-  "block.archaeologyexpanded.suspicious_red_sand": "Areia Vermelha suspeita"
+  "block.archaeologyexpanded.suspicious_red_sand": "Areia Vermelha suspeita",
+  "block.archaeologyexpanded.suspicious_stone": "Pedra suspeita"
 }

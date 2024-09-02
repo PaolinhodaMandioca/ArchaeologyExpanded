@@ -5,9 +5,12 @@
   "item.archaeologyexpanded.golden_brush": "Golden Brush",
   "item.archaeologyexpanded.diamond_brush": "Diamond Brush",
   "item.archaeologyexpanded.netherite_brush": "Netherite Brush",
+  "item.archaeologyexpanded.hand_pick": "Hand Pick",
 
   "block.archaeologyexpanded.suspicious_dirt": "Suspicious Dirt",
   "block.archaeologyexpanded.suspicious_clay": "Suspicious Clay",
   "block.archaeologyexpanded.suspicious_soul_sand": "Suspicious Soul Sand",
-  "block.archaeologyexpanded.suspicious_red_sand": "Suspicious Red Sand"
+  "block.archaeologyexpanded.suspicious_red_sand": "Suspicious Red Sand",
+  "block.archaeologyexpanded.suspicious_stone": "Suspicious Stone"
+
 }
