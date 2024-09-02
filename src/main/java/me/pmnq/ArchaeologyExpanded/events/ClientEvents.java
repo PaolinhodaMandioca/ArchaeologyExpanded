@@ -9,8 +9,8 @@ public class ClientEvents {
     public ClientEvents(){
     }
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(BlockEntityRegistry.BRUSHABLE_SAND.get(), BrushableBlockRenderer::new);
-    }
+    }*/
 }

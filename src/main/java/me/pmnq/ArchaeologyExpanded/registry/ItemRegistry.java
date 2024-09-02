@@ -4,6 +4,7 @@ import me.pmnq.ArchaeologyExpanded.items.*;
 import me.pmnq.ArchaeologyExpanded.ArchaeologyExpanded;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -16,6 +17,11 @@ public class ItemRegistry {
     public static final DeferredHolder<Item, Item> DIAMOND_BRUSH;
     public static final DeferredHolder<Item,Item> NETHERITE_BRUSH;
     public static final DeferredHolder<Item, Item> HAND_PICK;
+    public static final DeferredHolder<Item, Item> IRON_HAND_PICK;
+    public static final DeferredHolder<Item, Item> GOLDEN_HAND_PICK;
+    public static final DeferredHolder<Item, Item> DIAMOND_HAND_PICK;
+    public static final DeferredHolder<Item, Item> NETHERITE_HAND_PICK;
+
 
     //BlockItems
     public static final DeferredHolder<Item, Item> SUSPICIOUS_DIRT_ITEM;
@@ -35,11 +41,67 @@ public class ItemRegistry {
 
     static {
         //Items
-        IRON_BRUSH = ITEMS.register("iron_brush", IronBrush::new);
-        GOLDEN_BRUSH = ITEMS.register("golden_brush", GoldenBrush::new);
-        DIAMOND_BRUSH = ITEMS.register("diamond_brush", DiamondBrush::new);
-        NETHERITE_BRUSH = ITEMS.register("netherite_brush", NetheriteBrush::new);
-        HAND_PICK = ITEMS.register("hand_pick", HandPick::new);
+        IRON_BRUSH = ITEMS.register("iron_brush", () -> {
+            return new ModBrush(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(64*2)
+            );
+        });
+        GOLDEN_BRUSH = ITEMS.register("golden_brush", () -> {
+            return new ModBrush(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(80)
+            );
+        });
+        DIAMOND_BRUSH = ITEMS.register("diamond_brush", () -> {
+            return new ModBrush(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(64*3)
+            );
+        });
+        NETHERITE_BRUSH = ITEMS.register("netherite_brush", () -> {
+            return new ModBrush(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(64*6)
+            );
+        });
+        HAND_PICK = ITEMS.register("hand_pick", () -> {
+            return new HandPick(new Item.Properties()
+                    .durability(64)
+                    .stacksTo(1),
+                    200,
+                    "hand_pick");
+        });
+        IRON_HAND_PICK = ITEMS.register("iron_hand_pick", () -> {
+            return new HandPick(new Item.Properties()
+                    .durability(64*2)
+                    .stacksTo(1),
+                    80% 200,
+                    "iron_hand_pick");
+        });
+        GOLDEN_HAND_PICK = ITEMS.register("golden_hand_pick", () -> {
+            return new HandPick(new Item.Properties()
+                    .durability(80)
+                    .stacksTo(1),
+                    20% 200,
+                    "golden_hand_pick");
+        });
+        DIAMOND_HAND_PICK = ITEMS.register("diamond_hand_pick", () -> {
+            return new HandPick(new Item.Properties()
+                    .durability(64*3)
+                    .stacksTo(1),
+                    60% 200,
+                    "diamond_hand_pick");
+        });
+        NETHERITE_HAND_PICK = ITEMS.register("netherite_hand_pick", () -> {
+            return new HandPick(new Item.Properties()
+                    .durability(64*6)
+                    .stacksTo(1),
+                    40% 200,
+                    "netherite_hand_pick");
+        });
+
+
 
 
 

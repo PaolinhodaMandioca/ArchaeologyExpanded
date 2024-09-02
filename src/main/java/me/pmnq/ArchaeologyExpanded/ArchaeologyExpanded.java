@@ -8,6 +8,7 @@ import me.pmnq.ArchaeologyExpanded.registry.ItemRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.CreativeTabRegistry;
+import me.pmnq.ArchaeologyExpanded.renderer.StoneBrushableBlockRenderer;
 import net.minecraft.client.renderer.blockentity.BrushableBlockRenderer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -74,7 +75,7 @@ public class ArchaeologyExpanded {
         @SubscribeEvent
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_SAND.get(), BrushableBlockRenderer::new);
-            //event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_STONE.get(), BrushableBlockRenderer::new);
+            event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_STONE.get(), StoneBrushableBlockRenderer::new);
 
         }
     }

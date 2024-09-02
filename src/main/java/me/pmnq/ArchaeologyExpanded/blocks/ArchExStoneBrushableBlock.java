@@ -27,7 +27,7 @@ import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
 
-public class ArchExStoneBrushableBlock extends BaseEntityBlock implements Fallable {
+public class ArchExStoneBrushableBlock extends BaseEntityBlock{
 
     public static final MapCodec<ArchExStoneBrushableBlock> CODEC = RecordCodecBuilder.mapCodec((p_344647_) -> {
         return p_344647_.group(
@@ -77,10 +77,10 @@ public class ArchExStoneBrushableBlock extends BaseEntityBlock implements Fallab
             brushableblockentity.checkReset();
         }
 
-        if (FallingBlock.isFree(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight()) {
+        /*if (FallingBlock.isFree(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight()) {
             FallingBlockEntity fallingblockentity = FallingBlockEntity.fall(level, pos, state);
             fallingblockentity.disableDrop();
-        }
+        }*/
 
     }
 
