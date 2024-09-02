@@ -2,14 +2,17 @@ package me.pmnq.ArchaeologyExpanded;
 
 import com.mojang.logging.LogUtils;
 import me.pmnq.ArchaeologyExpanded.events.TestEvents;
+import me.pmnq.ArchaeologyExpanded.events.ClientEvents;
 import me.pmnq.ArchaeologyExpanded.registry.BlockRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ItemRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
 import me.pmnq.ArchaeologyExpanded.registry.CreativeTabRegistry;
+import net.minecraft.client.renderer.blockentity.BrushableBlockRenderer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,6 +22,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingEvent;
@@ -81,6 +85,12 @@ public class ArchaeologyExpanded {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+        }
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_BLOCK.get(), BrushableBlockRenderer::new);
+            //event.registerBlockEntityRenderer((BlockEntityType) BlockEntityRegistry.BRUSHABLE_STONE.get(), BrushableBlockRenderer::new);
 
         }
     }
