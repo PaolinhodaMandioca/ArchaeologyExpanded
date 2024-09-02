@@ -41,7 +41,16 @@ Este mod foi criado por duas pessoas apaixonadas por arqueologia e Minecraft:
 - **NescauQente_** - Desenvolvimento geral e novas ideias.
 
 ## Contribuições
-Estamos abertos a sugestões e melhorias! Se você encontrar algum bug ou tiver uma ideia para melhorar o mod, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Estamos abertos a sugestões e melhorias! Se você encontrar algum bug ou tiver uma ideia para melhorar o mod, sinta-se à vontade para abrir uma issue ou enviar um pull request
+
+## Doações
+
+Curtiu o **ArchaeologyExpanded**? Considere apoiar o desenvolvimento com uma doação! Isso nos ajuda a trazer atualizações mais rápido e adicionar novas funcionalidades.
+
+### Apoie Aqui
+- Chave PIX: 02e6b462-1e9d-4514-932f-d231a485b9da
+
+Obrigado pelo apoio!
 
 ## Licença MIT
 
