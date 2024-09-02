@@ -6,10 +6,21 @@
   "item.archaeologyexpanded.diamond_brush": "Pincel de diamante",
   "item.archaeologyexpanded.netherite_brush": "Pincel de netherita",
   "item.archaeologyexpanded.hand_pick": "Piqueta",
+  "item.archaeologyexpanded.iron_hand_pick": "Piqueta de ferro",
+  "item.archaeologyexpanded.golden_hand_pick": "Piqueta de ouro",
+  "item.archaeologyexpanded.diamond_hand_pick": "Piqueta de diamante",
+  "item.archaeologyexpanded.netherite_hand_pick": "Piqueta de netherita",
 
   "block.archaeologyexpanded.suspicious_dirt": "Terra suspeita",
   "block.archaeologyexpanded.suspicious_clay": "Argila suspeita",
-  "block.archaeologyexpanded.suspicious_soul_sand": "Areia das Almas suspeita",
+  "block.archaeologyexpanded.suspicious_soul_sand": "Areia das almas suspeita",
   "block.archaeologyexpanded.suspicious_red_sand": "Areia Vermelha suspeita",
-  "block.archaeologyexpanded.suspicious_stone": "Pedra suspeita"
+  "block.archaeologyexpanded.suspicious_stone": "Pedra suspeita",
+  "block.archaeologyexpanded.suspicious_soul_soil": "Terra das almas suspeita",
+  "block.archaeologyexpanded.suspicious_andesite": "Andesito suspeito",
+  "block.archaeologyexpanded.suspicious_diorite": "Diorito suspeito",
+  "block.archaeologyexpanded.suspicious_granite": "Granito suspeito",
+  "block.archaeologyexpanded.suspicious_deepslate": "Ardósia suspeita",
+  "block.archaeologyexpanded.suspicious_end_stone": "Pedra do End suspeita",
+  "block.archaeologyexpanded.suspicious_netherrack": "Netherrack suspeita"
 }

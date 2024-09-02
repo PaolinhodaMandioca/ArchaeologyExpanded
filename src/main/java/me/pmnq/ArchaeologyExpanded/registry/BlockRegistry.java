@@ -25,9 +25,10 @@ public class BlockRegistry {
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_RED_SAND;
 
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_STONE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_GRANITE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_DIORITE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_ANDESITE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_DEEPSLATE;
-    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_DIORITE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_END_STONE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_NETHERRACK;
 
@@ -118,18 +119,48 @@ public class BlockRegistry {
         });
 
         //configurar
+        SUSPICIOUS_GRANITE = BLOCKS.register("suspicious_granite", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.GRANITE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DIRT)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_DIORITE = BLOCKS.register("suspicious_diorite", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.DIORITE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DIRT)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
         SUSPICIOUS_ANDESITE = BLOCKS.register("suspicious_andesite", () -> {
             return new ArchExStoneBrushableBlock(
                     Blocks.ANDESITE,
                     SoundEvents.BRUSH_GENERIC,
                     SoundEvents.ENDER_DRAGON_DEATH,
                     BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.STONE)
+                            .mapColor(MapColor.DIRT)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .strength(0.75F)
                             .sound(SoundType.STONE)
                             .pushReaction(PushReaction.DESTROY));
         });
+
+
 
         //configurar
         SUSPICIOUS_DEEPSLATE = BLOCKS.register("suspicious_deepslate", () -> {
@@ -142,20 +173,6 @@ public class BlockRegistry {
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .strength(0.75F)
                             .sound(SoundType.DEEPSLATE)
-                            .pushReaction(PushReaction.DESTROY));
-        });
-
-        //configurar
-        SUSPICIOUS_DIORITE = BLOCKS.register("suspicious_diorite", () -> {
-            return new ArchExStoneBrushableBlock(
-                    Blocks.DIORITE,
-                    SoundEvents.BRUSH_GENERIC,
-                    SoundEvents.ENDER_DRAGON_DEATH,
-                    BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.STONE)
-                            .instrument(NoteBlockInstrument.BASEDRUM)
-                            .strength(0.75F)
-                            .sound(SoundType.STONE)
                             .pushReaction(PushReaction.DESTROY));
         });
 
