@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 public class ArchExBrushableBlock extends BrushableBlock {
     public ArchExBrushableBlock(Block block, BlockBehaviour.Properties properties, SoundEvent soundBrush, SoundEvent soundCompleted) {
-        super(block, soundCompleted, soundBrush, properties);
+        super(block, soundBrush, soundCompleted, properties);
     }
 
     @Nullable

@@ -2,6 +2,7 @@ package me.pmnq.ArchaeologyExpanded.registry;
 
 import me.pmnq.ArchaeologyExpanded.ArchaeologyExpanded;
 import me.pmnq.ArchaeologyExpanded.blocks.ArchExBrushableBlock;
+import me.pmnq.ArchaeologyExpanded.blocks.StoneBrushableBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +22,8 @@ public class BlockRegistry {
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SAND;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_CLAY;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_RED_SAND;
+    public static final DeferredHolder<Block, StoneBrushableBlock> SUS_STONE;
+
 
     public BlockRegistry() {
     }
@@ -33,10 +36,10 @@ public class BlockRegistry {
                             .mapColor(MapColor.DIRT)
                             .instrument(NoteBlockInstrument.SNARE)
                             .strength(0.25F)
-                            .sound(SoundType.SUSPICIOUS_SAND)
+                            .sound(SoundType.SUSPICIOUS_GRAVEL)
                             .pushReaction(PushReaction.DESTROY),
-                    SoundEvents.BRUSH_SAND,
-                    SoundEvents.BRUSH_SAND_COMPLETED);
+                    SoundEvents.BRUSH_GRAVEL,
+                    SoundEvents.BRUSH_GRAVEL_COMPLETED);
         });
 
         SUSPICIOUS_SOUL_SAND = BLOCKS.register("suspicious_soul_sand", () -> {
@@ -46,7 +49,7 @@ public class BlockRegistry {
                             .mapColor(MapColor.SAND)
                             .instrument(NoteBlockInstrument.SNARE)
                             .strength(0.25F)
-                            .sound(SoundType.SUSPICIOUS_SAND)
+                            .sound(SoundType.SOUL_SAND)
                             .pushReaction(PushReaction.DESTROY),
                     SoundEvents.BRUSH_SAND,
                     SoundEvents.BRUSH_SAND_COMPLETED);
@@ -76,6 +79,19 @@ public class BlockRegistry {
                             .pushReaction(PushReaction.DESTROY),
                     SoundEvents.BRUSH_SAND,
                     SoundEvents.BRUSH_SAND_COMPLETED);
+        });
+
+        SUS_STONE = BLOCKS.register("suspicious_stone", () -> {
+            return new StoneBrushableBlock(
+                    Blocks.STONE,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY));
         });
     }
 }
