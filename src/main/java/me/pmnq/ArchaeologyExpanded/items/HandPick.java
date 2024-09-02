@@ -1,7 +1,7 @@
 package me.pmnq.ArchaeologyExpanded.items;
 
-import me.pmnq.ArchaeologyExpanded.blocks.StoneBrushableBlock;
-import me.pmnq.ArchaeologyExpanded.blocks.entity.StoneBrushableBlockEntity;
+import me.pmnq.ArchaeologyExpanded.blocks.ArchExStoneBrushableBlock;
+import me.pmnq.ArchaeologyExpanded.blocks.entity.ArchExStoneBrushableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -77,8 +77,8 @@ public class HandPick extends Item {
 
                         Block var15 = blockstate.getBlock();
                         SoundEvent soundevent;
-                        if (var15 instanceof StoneBrushableBlock) {
-                            StoneBrushableBlock brushableblock = (StoneBrushableBlock)var15;
+                        if (var15 instanceof ArchExStoneBrushableBlock) {
+                            ArchExStoneBrushableBlock brushableblock = (ArchExStoneBrushableBlock)var15;
                             soundevent = brushableblock.getBrushSound();
                         } else {
                             soundevent = SoundEvents.BRUSH_GENERIC;
@@ -87,8 +87,8 @@ public class HandPick extends Item {
                         level.playSound(player, blockpos, soundevent, SoundSource.BLOCKS);
                         if (!level.isClientSide()) {
                             BlockEntity var18 = level.getBlockEntity(blockpos);
-                            if (var18 instanceof StoneBrushableBlockEntity) {
-                                StoneBrushableBlockEntity brushableblockentity = (StoneBrushableBlockEntity)var18;
+                            if (var18 instanceof ArchExStoneBrushableBlockEntity) {
+                                ArchExStoneBrushableBlockEntity brushableblockentity = (ArchExStoneBrushableBlockEntity)var18;
                                 boolean flag1 = brushableblockentity.brush(level.getGameTime(), player, blockhitresult.getDirection());
                                 if (flag1) {
                                     EquipmentSlot equipmentslot = stack.equals(player.getItemBySlot(EquipmentSlot.OFFHAND)) ? EquipmentSlot.OFFHAND : EquipmentSlot.MAINHAND;

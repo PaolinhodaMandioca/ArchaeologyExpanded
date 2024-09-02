@@ -12,7 +12,7 @@ public class ArchExBrushableBlockEntity extends BrushableBlockEntity {
         super(pos, blockstate);
     }
 
-    public BlockEntityType<?> getType() {
-        return BlockEntityRegistry.BRUSHABLE_BLOCK.get(); // Use o registro correto
+    public BlockEntityType<?> getType(){
+        return BlockEntityRegistry.BRUSHABLE_SAND.get(); // Use o registro correto
     }
 }

@@ -2,7 +2,7 @@ package me.pmnq.ArchaeologyExpanded.registry;
 
 import me.pmnq.ArchaeologyExpanded.ArchaeologyExpanded;
 import me.pmnq.ArchaeologyExpanded.blocks.ArchExBrushableBlock;
-import me.pmnq.ArchaeologyExpanded.blocks.StoneBrushableBlock;
+import me.pmnq.ArchaeologyExpanded.blocks.ArchExStoneBrushableBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -22,7 +22,7 @@ public class BlockRegistry {
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SAND;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_CLAY;
     public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_RED_SAND;
-    public static final DeferredHolder<Block, StoneBrushableBlock> SUS_STONE;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUS_STONE;
 
 
     public BlockRegistry() {
@@ -82,7 +82,7 @@ public class BlockRegistry {
         });
 
         SUS_STONE = BLOCKS.register("suspicious_stone", () -> {
-            return new StoneBrushableBlock(
+            return new ArchExStoneBrushableBlock(
                     Blocks.STONE,
                     SoundEvents.BRUSH_GENERIC,
                     SoundEvents.ENDER_DRAGON_DEATH,
