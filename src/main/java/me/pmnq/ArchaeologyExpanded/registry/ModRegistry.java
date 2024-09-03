@@ -1,13 +1,7 @@
 package me.pmnq.ArchaeologyExpanded.registry;
 
 import me.pmnq.ArchaeologyExpanded.ArchaeologyExpanded;
-import me.pmnq.ArchaeologyExpanded.blocks.entity.ArchExBrushableBlockEntity;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 

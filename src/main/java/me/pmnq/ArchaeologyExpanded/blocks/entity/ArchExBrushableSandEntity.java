@@ -6,9 +6,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ArchExBrushableBlockEntity extends BrushableBlockEntity {
+public class ArchExBrushableSandEntity extends BrushableBlockEntity {
 
-    public ArchExBrushableBlockEntity(BlockPos pos, BlockState blockstate) {
+    public ArchExBrushableSandEntity(BlockPos pos, BlockState blockstate) {
         super(pos, blockstate);
     }
 

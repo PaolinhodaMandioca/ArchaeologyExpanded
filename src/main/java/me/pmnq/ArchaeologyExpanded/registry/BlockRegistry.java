@@ -1,7 +1,7 @@
 package me.pmnq.ArchaeologyExpanded.registry;
 
 import me.pmnq.ArchaeologyExpanded.ArchaeologyExpanded;
-import me.pmnq.ArchaeologyExpanded.blocks.ArchExBrushableBlock;
+import me.pmnq.ArchaeologyExpanded.blocks.ArchExBrushableSand;
 import me.pmnq.ArchaeologyExpanded.blocks.ArchExStoneBrushableBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.Block;
@@ -18,11 +18,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class BlockRegistry {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ArchaeologyExpanded.MOD_ID);
 
-    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_DIRT;
-    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SAND;
-    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_SOUL_SOIL;
-    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_CLAY;
-    public static final DeferredHolder<Block, ArchExBrushableBlock> SUSPICIOUS_RED_SAND;
+    public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_DIRT;
+    public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_SOUL_SAND;
+    public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_SOUL_SOIL;
+    public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_CLAY;
+    public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_RED_SAND;
 
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_STONE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_GRANITE;
@@ -38,7 +38,7 @@ public class BlockRegistry {
 
     static {
         SUSPICIOUS_DIRT = BLOCKS.register("suspicious_dirt", () -> {
-            return new ArchExBrushableBlock(
+            return new ArchExBrushableSand(
                     Blocks.DIRT,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.DIRT)
@@ -51,7 +51,7 @@ public class BlockRegistry {
         });
 
         SUSPICIOUS_SOUL_SAND = BLOCKS.register("suspicious_soul_sand", () -> {
-            return new ArchExBrushableBlock(
+            return new ArchExBrushableSand(
                     Blocks.SOUL_SAND,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.SAND)
@@ -65,7 +65,7 @@ public class BlockRegistry {
 
         //configurar
         SUSPICIOUS_SOUL_SOIL = BLOCKS.register("suspicious_soul_soil", () -> {
-            return new ArchExBrushableBlock(
+            return new ArchExBrushableSand(
                     Blocks.SOUL_SOIL,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.SAND)
@@ -78,7 +78,7 @@ public class BlockRegistry {
         });
 
         SUSPICIOUS_CLAY = BLOCKS.register("suspicious_clay", () -> {
-            return new ArchExBrushableBlock(
+            return new ArchExBrushableSand(
                     Blocks.CLAY,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.SAND)
@@ -91,7 +91,7 @@ public class BlockRegistry {
         });
 
         SUSPICIOUS_RED_SAND = BLOCKS.register("suspicious_red_sand", () -> {
-            return new ArchExBrushableBlock(
+            return new ArchExBrushableSand(
                     Blocks.RED_SAND,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.SAND)
