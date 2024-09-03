@@ -25,7 +25,8 @@ public class BlockEntityRegistry {
                             BlockRegistry.SUSPICIOUS_SOUL_SAND.get(),
                             BlockRegistry.SUSPICIOUS_CLAY.get(),
                             BlockRegistry.SUSPICIOUS_RED_SAND.get(),
-                            BlockRegistry.SUSPICIOUS_SOUL_SOIL.get()
+                            BlockRegistry.SUSPICIOUS_SOUL_SOIL.get(),
+                            BlockRegistry.SUSPICIOUS_MUD.get()
                     }).build(null);
         });
 
@@ -38,7 +39,9 @@ public class BlockEntityRegistry {
                             BlockRegistry.SUSPICIOUS_DIORITE.get(),
                             BlockRegistry.SUSPICIOUS_GRANITE.get(),
                             BlockRegistry.SUSPICIOUS_END_STONE.get(),
-                            BlockRegistry.SUSPICIOUS_NETHERRACK.get()
+                            BlockRegistry.SUSPICIOUS_NETHERRACK.get(),
+                            BlockRegistry.SUSPICIOUS_CALCITE.get(),
+                            BlockRegistry.SUSPICIOUS_TUFF.get()
                     }).build(null);
         });
 

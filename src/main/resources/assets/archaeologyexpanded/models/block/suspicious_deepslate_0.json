@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "archaeologyexpanded:block/suspicious_deepslate_0"
+    "end": "archaeologyexpanded:block/suspicious_deepslate_top_0",
+    "side": "archaeologyexpanded:block/suspicious_deepslate_0"
   }
 }

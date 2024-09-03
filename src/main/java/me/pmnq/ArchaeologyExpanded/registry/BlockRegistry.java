@@ -19,6 +19,7 @@ public class BlockRegistry {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ArchaeologyExpanded.MOD_ID);
 
     public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_DIRT;
+    public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_MUD;
     public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_SOUL_SAND;
     public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_SOUL_SOIL;
     public static final DeferredHolder<Block, ArchExBrushableSand> SUSPICIOUS_CLAY;
@@ -31,6 +32,8 @@ public class BlockRegistry {
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_DEEPSLATE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_END_STONE;
     public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_NETHERRACK;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_TUFF;
+    public static final DeferredHolder<Block, ArchExStoneBrushableBlock> SUSPICIOUS_CALCITE;
 
 
     public BlockRegistry() {
@@ -40,6 +43,19 @@ public class BlockRegistry {
         SUSPICIOUS_DIRT = BLOCKS.register("suspicious_dirt", () -> {
             return new ArchExBrushableSand(
                     Blocks.DIRT,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DIRT)
+                            .instrument(NoteBlockInstrument.SNARE)
+                            .strength(0.25F)
+                            .sound(SoundType.SUSPICIOUS_GRAVEL)
+                            .pushReaction(PushReaction.DESTROY),
+                    SoundEvents.BRUSH_GRAVEL,
+                    SoundEvents.BRUSH_GRAVEL_COMPLETED);
+        });
+
+        SUSPICIOUS_MUD = BLOCKS.register("suspicious_mud", () -> {
+            return new ArchExBrushableSand(
+                    Blocks.MUD,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.DIRT)
                             .instrument(NoteBlockInstrument.SNARE)
@@ -194,6 +210,34 @@ public class BlockRegistry {
         SUSPICIOUS_NETHERRACK = BLOCKS.register("suspicious_netherrack", () -> {
             return new ArchExStoneBrushableBlock(
                     Blocks.NETHERRACK,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.NETHER)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.NETHERRACK)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_TUFF = BLOCKS.register("suspicious_tuff", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.TUFF,
+                    SoundEvents.BRUSH_GENERIC,
+                    SoundEvents.ENDER_DRAGON_DEATH,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.NETHER)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .strength(0.75F)
+                            .sound(SoundType.NETHERRACK)
+                            .pushReaction(PushReaction.DESTROY));
+        });
+
+        //configurar
+        SUSPICIOUS_CALCITE = BLOCKS.register("suspicious_calcite", () -> {
+            return new ArchExStoneBrushableBlock(
+                    Blocks.CALCITE,
                     SoundEvents.BRUSH_GENERIC,
                     SoundEvents.ENDER_DRAGON_DEATH,
                     BlockBehaviour.Properties.of()

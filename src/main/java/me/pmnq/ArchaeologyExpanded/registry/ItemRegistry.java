@@ -24,21 +24,24 @@ public class ItemRegistry {
 
 
     //BlockItems
+    //Stone
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_STONE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_GRANITE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_DIORITE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_ANDESITE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_TUFF_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_DEEPSLATE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_NETHERRACK_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_END_STONE_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_CALCITE_ITEM;
+
+    //Sand
     public static final DeferredHolder<Item, Item> SUSPICIOUS_DIRT_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_MUD_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_CLAY_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_RED_SAND_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SAND_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SOIL_ITEM;
-
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_STONE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_DIORITE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_GRANITE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_ANDESITE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_DEEPSLATE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_END_STONE_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_NETHERRACK_ITEM;
-
-
 
     static {
         //Items
@@ -107,12 +110,50 @@ public class ItemRegistry {
 
 
         //BlockItems
+        //Stone
+        SUSPICIOUS_STONE_ITEM =ITEMS.register("suspicious_stone", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_STONE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_GRANITE_ITEM =ITEMS.register("suspicious_granite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_GRANITE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_DIORITE_ITEM =ITEMS.register("suspicious_diorite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_DIORITE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_ANDESITE_ITEM =ITEMS.register("suspicious_andesite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_ANDESITE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_TUFF_ITEM =ITEMS.register("suspicious_tuff", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_TUFF.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_DEEPSLATE_ITEM =ITEMS.register("suspicious_deepslate", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_DEEPSLATE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_NETHERRACK_ITEM =ITEMS.register("suspicious_netherrack", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_NETHERRACK.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_END_STONE_ITEM =ITEMS.register("suspicious_end_stone", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_END_STONE.get(), new Item.Properties());
+        });
+
+        SUSPICIOUS_CALCITE_ITEM =ITEMS.register("suspicious_calcite", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_CALCITE.get(), new Item.Properties());
+        });
+
+        //Sand
         SUSPICIOUS_DIRT_ITEM = ITEMS.register("suspicious_dirt", () -> {
             return new BlockItem(BlockRegistry.SUSPICIOUS_DIRT.get(), new Item.Properties());
         });
 
-        SUSPICIOUS_SOUL_SAND_ITEM = ITEMS.register("suspicious_soul_sand", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_SOUL_SAND.get(), new Item.Properties());
+        SUSPICIOUS_MUD_ITEM = ITEMS.register("suspicious_mud", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_MUD.get(), new Item.Properties());
         });
 
         SUSPICIOUS_CLAY_ITEM = ITEMS.register("suspicious_clay", () -> {
@@ -123,36 +164,12 @@ public class ItemRegistry {
             return new BlockItem(BlockRegistry.SUSPICIOUS_RED_SAND.get(), new Item.Properties());
         });
 
+        SUSPICIOUS_SOUL_SAND_ITEM = ITEMS.register("suspicious_soul_sand", () -> {
+            return new BlockItem(BlockRegistry.SUSPICIOUS_SOUL_SAND.get(), new Item.Properties());
+        });
+
         SUSPICIOUS_SOUL_SOIL_ITEM = ITEMS.register("suspicious_soul_soil", () -> {
             return new BlockItem(BlockRegistry.SUSPICIOUS_SOUL_SOIL.get(), new Item.Properties());
         });
-
-        SUSPICIOUS_STONE_ITEM =ITEMS.register("suspicious_stone", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_STONE.get(), new Item.Properties());
-        });
-        SUSPICIOUS_DIORITE_ITEM =ITEMS.register("suspicious_diorite", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_DIORITE.get(), new Item.Properties());
-        });
-
-        SUSPICIOUS_GRANITE_ITEM =ITEMS.register("suspicious_granite", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_GRANITE.get(), new Item.Properties());
-        });
-
-        SUSPICIOUS_ANDESITE_ITEM =ITEMS.register("suspicious_andesite", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_ANDESITE.get(), new Item.Properties());
-        });
-
-        SUSPICIOUS_DEEPSLATE_ITEM =ITEMS.register("suspicious_deepslate", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_DEEPSLATE.get(), new Item.Properties());
-        });
-
-        SUSPICIOUS_END_STONE_ITEM =ITEMS.register("suspicious_end_stone", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_END_STONE.get(), new Item.Properties());
-        });
-
-        SUSPICIOUS_NETHERRACK_ITEM =ITEMS.register("suspicious_netherrack", () -> {
-            return new BlockItem(BlockRegistry.SUSPICIOUS_NETHERRACK.get(), new Item.Properties());
-        });
-
     }
 }
