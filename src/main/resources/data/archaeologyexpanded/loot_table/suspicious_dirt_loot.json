@@ -15,39 +15,11 @@
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 1
+                "max": 10
               }
             }
           ],
           "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ],
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:gold_ingot",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ],
-          "weight": 15
         }
       ]
     }
