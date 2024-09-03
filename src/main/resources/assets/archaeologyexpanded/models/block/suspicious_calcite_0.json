@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "archaeologyexpanded:block/suspicious_calcite_0"
+  }
+}
