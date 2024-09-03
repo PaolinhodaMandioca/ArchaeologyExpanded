@@ -25,9 +25,9 @@ public class ItemRegistry {
 
     //BlockItems
     public static final DeferredHolder<Item, Item> SUSPICIOUS_DIRT_ITEM;
-    public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SAND_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_CLAY_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_RED_SAND_ITEM;
+    public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SAND_ITEM;
     public static final DeferredHolder<Item, Item> SUSPICIOUS_SOUL_SOIL_ITEM;
 
     public static final DeferredHolder<Item, Item> SUSPICIOUS_STONE_ITEM;
