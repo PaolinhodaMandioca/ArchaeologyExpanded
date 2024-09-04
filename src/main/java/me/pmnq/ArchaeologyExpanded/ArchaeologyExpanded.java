@@ -3,15 +3,15 @@ package me.pmnq.ArchaeologyExpanded;
 import com.mojang.logging.LogUtils;
 import me.pmnq.ArchaeologyExpanded.events.TestEvents;
 import me.pmnq.ArchaeologyExpanded.events.ClientEvents;
-import me.pmnq.ArchaeologyExpanded.registry.BlockRegistry;
-import me.pmnq.ArchaeologyExpanded.registry.ItemRegistry;
-import me.pmnq.ArchaeologyExpanded.registry.ModRegistry;
-import me.pmnq.ArchaeologyExpanded.registry.BlockEntityRegistry;
-import me.pmnq.ArchaeologyExpanded.registry.CreativeTabRegistry;
+import me.pmnq.ArchaeologyExpanded.registry.*;
 import me.pmnq.ArchaeologyExpanded.renderer.StoneBrushableBlockRenderer;
 import net.minecraft.client.renderer.blockentity.BrushableBlockRenderer;
 import net.minecraft.core.component.DataComponentPatch;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
+import net.minecraft.world.entity.animal.Wolf;
+import net.minecraft.world.entity.animal.armadillo.Armadillo;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -36,6 +36,7 @@ import org.spongepowered.asm.launch.MixinBootstrap;
 public class ArchaeologyExpanded {
 
 
+
     public static final String MOD_ID = "archaeologyexpanded";
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -48,6 +49,7 @@ public class ArchaeologyExpanded {
         ItemRegistry.ITEMS.register(modEventBus);
         BlockEntityRegistry.ENTITY.register(modEventBus);
         CreativeTabRegistry.CREATIVE_TAB.register(modEventBus);
+        ModDataComponents.ENCHANTMENT_EFFECT_COMPONENTS.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -80,5 +82,10 @@ public class ArchaeologyExpanded {
 
         }
     }
+
+    public static ResourceLocation loc(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    }
+
 }
 
